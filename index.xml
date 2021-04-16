@@ -8,6 +8,66 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 14 Apr 2021 16:42:23 +0500</lastBuildDate><atom:link href="https://anas-2000.github.io/anasabdullah.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>header.asm</title>
+      <link>https://anas-2000.github.io/anasabdullah.github.io/docs/assembly/header/</link>
+      <pubDate>Mon, 12 Apr 2021 17:13:24 +0500</pubDate>
+      
+      <guid>https://anas-2000.github.io/anasabdullah.github.io/docs/assembly/header/</guid>
+      <description>Inside the header.asm file we have to include data that has to be included in the operating system binary. This is necessary so that the bootloader can understand that there is an operating system that can run on the machine.
+The header file contains the header start and end label. In between these labels lies the header data. Firstly, there is a magic number that the bootloader will look for. Next, we describe the architecture of the OS.</description>
+    </item>
+    
+    <item>
+      <title>main.asm</title>
+      <link>https://anas-2000.github.io/anasabdullah.github.io/docs/assembly/main/</link>
+      <pubDate>Mon, 12 Apr 2021 17:13:11 +0500</pubDate>
+      
+      <guid>https://anas-2000.github.io/anasabdullah.github.io/docs/assembly/main/</guid>
+      <description>The main.asm file acts as an entry point for the operating system. Initially we code it for 32-bit mode, but later we make another for 64-bit mode. Therefore, we set the bits to 32.
+The first step in converting the OS to 64 bit mode is to set up a stack in the main.asm file. We reserve a 16 KB of space for the stack. We include the stack in the “bss” section.</description>
+    </item>
+    
+    <item>
+      <title>main64.asm</title>
+      <link>https://anas-2000.github.io/anasabdullah.github.io/docs/assembly/main64/</link>
+      <pubDate>Mon, 12 Apr 2021 17:12:46 +0500</pubDate>
+      
+      <guid>https://anas-2000.github.io/anasabdullah.github.io/docs/assembly/main64/</guid>
+      <description>Inside this file, we set the bits to 64 and then create the “long_mode_start” label. Next, we load 0 into the data segment registers.
+My github repository link</description>
+    </item>
+    
+    <item>
+      <title>main.c</title>
+      <link>https://anas-2000.github.io/anasabdullah.github.io/docs/main.c/main.c/</link>
+      <pubDate>Mon, 12 Apr 2021 17:31:35 +0500</pubDate>
+      
+      <guid>https://anas-2000.github.io/anasabdullah.github.io/docs/main.c/main.c/</guid>
+      <description>In here, we have create a “kernel_main()” function which is called in the main64.asm file. Inside the main.c file we call a bunch of functions:
+ print_clear()— to clear the screen print_set_color(foreground_color, background_color)— to set foreground and background color. print_str(string)— to print text.  My github repository link</description>
+    </item>
+    
+    <item>
+      <title>print.h</title>
+      <link>https://anas-2000.github.io/anasabdullah.github.io/docs/print.h/print.h/</link>
+      <pubDate>Mon, 12 Apr 2021 17:31:22 +0500</pubDate>
+      
+      <guid>https://anas-2000.github.io/anasabdullah.github.io/docs/print.h/print.h/</guid>
+      <description>In this file we declare the functions that we have called in the main.c file in addition to the function print_char(char). In addition to this we create an enum for the various colors.
+My github repository link</description>
+    </item>
+    
+    <item>
+      <title>print.c</title>
+      <link>https://anas-2000.github.io/anasabdullah.github.io/docs/print.c/print.c/</link>
+      <pubDate>Mon, 12 Apr 2021 17:30:55 +0500</pubDate>
+      
+      <guid>https://anas-2000.github.io/anasabdullah.github.io/docs/print.c/print.c/</guid>
+      <description>We create a “Char” struct to represent character— each character is represented by the ASCII character and an 8-bit color code. A buffer variable refers the video memory.
+clear_row(): Simply print an empty space for each column in a row. print_clear(): Inside this function we loop through all the rows and in each iteration call the “clear_row()” function. print_char(char): If the character is a new line character or the current column is the last column, “print_newline()” is called.</description>
+    </item>
+    
+    <item>
       <title>Post1 title</title>
       <link>https://anas-2000.github.io/anasabdullah.github.io/posts/post1/</link>
       <pubDate>Wed, 14 Apr 2021 16:42:23 +0500</pubDate>
